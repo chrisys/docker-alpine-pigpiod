@@ -18,7 +18,7 @@ echo "Starting daemon pigpiod ..."
 #  option -a 1 should assure that we are not using GPU memory.
 #     for running on 64bit, don't include the '-a 1' flag https://github.com/zinen/docker-alpine-pigpiod/issues/17
 #  option -s 10 reduces sample rate down every 10 micro seconds intead of default 5 https://github.com/joan2937/pigpio/issues/29#issuecomment-151076670
-pigpiod -g -a 1 -s 10
+pigpiod -g -a 1 -s 10 $PIGPIO_PARAMS
 echo "... daemon stopped unexpectedly."
 
 # added extra logic for issue: https://github.com/janvda/balena-node-red/issues/1
